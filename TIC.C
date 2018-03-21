@@ -2,6 +2,9 @@
 #include <stdlib.h>
 
 using namespace std;
+
+char a[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
+
 void pattern(char a[9]);
 void pattern(char a[9])
 {
@@ -19,7 +22,6 @@ printf("\n");
 void input(int choice,int k);
 void input(int choice,int k)
 {
-   char a[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
    if(a[choice]==' ' &&choice>=0 &&choice<=9)
    {
        a[choice]=(k%2==0)?('X'):('O');
