@@ -5,6 +5,7 @@ using namespace std;
 
 char a[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
+<<<<<<< HEAD
 void tic();
 void tic()
 {
@@ -16,6 +17,8 @@ void tic()
     printf("\n\n\n");
 }
 
+=======
+>>>>>>> cb422df6625d4df21e6d6a533254fef50518758a
 void pattern(char a[9]);
 void pattern(char a[9])
 {
@@ -34,6 +37,7 @@ printf("\n");
 
 int check(char b[],int c)
 {
+<<<<<<< HEAD
     if
     (
 
@@ -66,6 +70,8 @@ void input(int choice, int k)
 {
     choice--;
    if(a[choice]==' ' &&choice>=0 &&choice<9)
+=======
+>>>>>>> cb422df6625d4df21e6d6a533254fef50518758a
    {
        a[choice]=(k%2==0)?('X'):('O');
        system("cls");
