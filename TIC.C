@@ -5,7 +5,6 @@ using namespace std;
 
 char a[9]={' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
 
-<<<<<<< HEAD
 void tic();
 void tic()
 {
@@ -17,8 +16,7 @@ void tic()
     printf("\n\n\n");
 }
 
-=======
->>>>>>> cb422df6625d4df21e6d6a533254fef50518758a
+
 void pattern(char a[9]);
 void pattern(char a[9])
 {
@@ -37,7 +35,6 @@ printf("\n");
 
 int check(char b[],int c)
 {
-<<<<<<< HEAD
     if
     (
 
@@ -65,51 +62,49 @@ int check(char b[],int c)
 
 
 
-void input(int choice, int k);
-void input(int choice, int k)
+void input();
+void input()
 {
-    choice--;
-   if(a[choice]==' ' &&choice>=0 &&choice<9)
-=======
->>>>>>> cb422df6625d4df21e6d6a533254fef50518758a
-   {
+    int g,choice;
+    for(int k=0;k<9;k++)
+    {
+     printf("\nEnter Your Choice to Input Character: ");
+     scanf("%d" ,&choice);
+     choice--;
+     if(a[choice]==' ' &&choice>=0 &&choice<9)
+     {
        a[choice]=(k%2==0)?('X'):('O');
        system("cls");
        tic();
        pattern(a);
-       k++;
-   }
-   else
-   {
+     }
+     else
+     {
        printf("Invalid Value\n");
        k--;
-   }
+       continue;
+     }
+     g=check(a,0);
+     if(g==1 &&k%2==0)
+     {
+        printf("\n\nX WINS");
+        break;
+     }
+     else if(g==1 &&k%2!=0)
+     {
+        printf("\n\nO WINS");
+        break;
+     }
+}
+if(g==0)
+printf("\n\nDraw");
 }
 
 
 int main()
 {
-int f,ch,g;
 tic();
 pattern(a);
-for(int f=0;f<9;f++)
-{
-printf("\nEnter Your Choice to Input Character: ");
-scanf("%d" ,&ch);
-input(ch,f);
-g=check(a,0);
-if(g==1 &&f%2==0)
-{
-    printf("\n\nX WINS");
-    break;
-}
-else if(g==1 &&f%2!=0)
-{
-    printf("\n\nO WINS");
-    break;
-}
-}
-if(g==0)
-printf("\n\nDraw");
+input();
 return 0;
 }
